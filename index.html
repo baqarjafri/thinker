@@ -148,7 +148,7 @@ table.mx td:hover{outline:2px solid var(--blue);outline-offset:-2px}
 .vote.done .card .res{display:block}.vote.done .card.hum{border-color:var(--blue)}.vote.done .card.mac{border-color:var(--orange)}
 .votebtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;align-items:center}
 .quote{font-family:var(--serif);font-size:21px;color:var(--navy);line-height:1.35;padding-left:16px;border-left:4px solid var(--magenta);margin-bottom:18px}
-.quote small{display:block;font:13px var(--sans);color:var(--muted);margin-top:4px}
+.quote small{display:block;font:12.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 .stu{border:1px solid var(--hair);border-radius:10px;padding:16px 18px;margin-bottom:14px;background:var(--surface)}
 .stu .h{font-family:var(--serif);font-size:20px;color:var(--navy);margin-bottom:6px}
 .mark{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:4px;font-size:13.5px;font-weight:bold}
@@ -169,7 +169,7 @@ table.tbl td.p{font-family:var(--serif);color:var(--navy);width:44%}
 .routeland a{border-radius:10px;padding:14px 18px;font-family:var(--serif);font-size:21px;color:#fff;text-decoration:none}
 .routeland .v{background:#082663}.routeland .t{background:#3B1266}
 .maprow{display:flex;flex-wrap:wrap;gap:12px 30px;font-size:15px;color:var(--grey);margin:-14px 0 24px}
-.maprow b{color:var(--magenta-ink);text-transform:uppercase;letter-spacing:.1em;font-size:12.5px;margin-right:6px}
+.maprow b{color:var(--magenta-ink)}.maprow i{font-style:normal;color:var(--muted);margin-right:8px}
 .ways{display:grid;gap:14px}
 .way{display:grid;grid-template-columns:150px minmax(0,1fr);align-items:center;gap:20px;border-left:4px solid var(--orange);padding:8px 0 8px 18px;text-decoration:none;color:var(--ink)}
 .way .n{font-family:var(--serif);font-size:40px;color:var(--orange-ink);line-height:1}
@@ -252,7 +252,7 @@ body.present #hud{display:block}
 <!-- 2 -->
 <section id="s-route"><div class="in">
  <h2 class="ct">The route: one question, three judges, a verdict, a turn</h2>
- <div class="maprow"><span><b>indistinguishable writing</b>the claim we test</span><span><b>not the text</b>what follows if it is true</span><span><b>assessing the thinker</b>what we propose</span></div>
+ <div class="maprow"><span>The claim we test: <b>indistinguishable writing</b></span><span><i>→</i>What follows if it is true: <b>not the text</b></span><span><i>→</i>What we propose: <b>assessing the thinker</b></span></div>
  <p class="lede">Put one question to three judges: is this writing human or machine?</p>
  <div class="routegrid">
   <div class="judge"><div class="h">A machine</div><div class="s">The reverse Turing test · four experiments</div>
@@ -403,7 +403,7 @@ body.present #hud{display:block}
  <div class="eyebrow">Can a key tell? · The watermark</div>
  <h2 class="ct">The vendor stopped looking for AI style and planted a key instead</h2>
  <div class="two">
-  <div><div class="quote">“processed by Claude”<small>what the key can say</small></div><div class="quote">“not fully conclusive … may not be the original author”<small>the vendor's own caveat</small></div><div class="quote">It fades under editing and paraphrase. Its absence proves nothing.<small>from the vendor's documentation</small></div></div>
+  <div><div class="quote"><small>What the key can say</small>“processed by Claude”</div><div class="quote"><small>The vendor's own caveat</small>“not fully conclusive … may not be the original author”</div><div class="quote"><small>From the vendor's documentation</small>It fades under editing and paraphrase. Its absence proves nothing.</div></div>
   <div><div class="stu"><div class="h">The honest student who had Claude fix the grammar</div>Every idea is theirs. The text passed through the model, so it carries the key, and, as the polish test showed, it now reads as machine.<br><span class="mark y">carries the mark</span></div>
    <div class="stu"><div class="h">The student who absorbed the style</div>Wrote every word alone, in the style they learned from reading AI text. No model touched it.<br><span class="mark n">no mark</span></div></div>
  </div>
