@@ -357,7 +357,7 @@ body.present #hud{display:block}
   <div class="tiles">
    <div class="tile"><div class="k">Asked</div><div class="v">Across detector families, which real writing is called machine-made?</div></div>
    <div class="tile"><div class="k">Built</div><div class="v">Three families scored under rules fixed before scoring: two 2023-era predictability methods and the 2025 classifier.</div></div>
-   <div class="tile"><div class="k">Data</div><div class="v"><b>52</b> real human passages, <b>52</b> matched Claude passages, <b>4</b> exhibits: the US Constitution, the Declaration, the first author's 2018 thesis.</div></div>
+   <div class="tile"><div class="k">Data</div><div class="v"><b>52</b> real human passages, <b>52</b> matched Claude passages, <b>4</b> exhibits: the US Constitution, the Declaration, the first author's 2018 MPhil thesis.</div></div>
    <div class="tile found"><div class="k">Found</div><div class="v">The older family flags the Constitution and misses 9 in 10 Claude passages. The 2025 detector is fair today: it trained on this year's models.</div></div>
   </div>
   <div class="fig">
@@ -626,7 +626,7 @@ secs.forEach(x=>io.observe(x));
 (function(){
  const M=D.e2;const dets=[['mean_logprob_qwen05','Predictability','2023-era method'],['binoculars_qwen05','Paired perplexity','2023-era method'],['classifier_desklib','2025 classifier','trained on this year\'s models']];
  const cols=[['S','School essays','human'],['L','PhD theses','human'],['P','Wikipedia 2021','human'],['G','Claude, matched','machine']];
- const exs=[['X_constitution','Constitution'],['X_declaration','Declaration'],['X_thesis_1','2018 thesis, p. 1'],['X_thesis_2','2018 thesis, p. 2']];
+ const exs=[['X_constitution','Constitution'],['X_declaration','Declaration'],['X_thesis_1','MPhil thesis, p. 1'],['X_thesis_2','MPhil thesis, p. 2']];
  let view='matrix';
  const V=[['matrix','Who is flagged'],['ci','Rates with 95% intervals']];
  V.forEach(([k,l])=>{const b=h('button',{class:'chipbtn',type:'button','aria-pressed':k===view},l);b.onclick=()=>{view=k;[...$('#mView').children].forEach(x=>x.setAttribute('aria-pressed',x===b));draw();};$('#mView').append(b);});
@@ -693,7 +693,7 @@ how('#howPersona',[
 how('#howMirror',[
  ['In plain words','We gave three families of detectors the same real writing and counted whom they accused.'],
  ['The detectors',`Predictability: the average word log-probability under ${pin('explainer_observer')}, the signal behind many 2023-era detectors. Paired perplexity: Binoculars, comparing ${pin('binoculars_observer')} with its instruction-tuned twin. The 2025 classifier: ${pin('classifier_desklib')}. Each flags at its own line that falsely flags 5% of the 40 human calibration passages.`],
- ['The passages','16 school essays (PERSUADE 2.0, written before 2022); 17 PhD thesis passages (White Rose eTheses, 2019 and 2020, the first open theses yielding a body-prose passage under a fixed rule); 19 Wikipedia leads (revisions before July 2021); 52 passages by Claude Sonnet 5, each matched in topic and length to one human passage; and four exhibits: the US Constitution (Preamble and the opening of Article I), the Declaration of Independence (opening), and two passages from the first author\'s 2018 MSc thesis.'],
+ ['The passages','16 school essays (PERSUADE 2.0, written before 2022); 17 PhD thesis passages (White Rose eTheses, 2019 and 2020, the first open theses yielding a body-prose passage under a fixed rule); 19 Wikipedia leads (revisions before July 2021); 52 passages by Claude Sonnet 5, each matched in topic and length to one human passage; and four exhibits: the US Constitution (Preamble and the opening of Article I), the Declaration of Independence (opening), and two passages from the first author\'s 2018 MPhil thesis.'],
  ['Registered rule','H2: the 2025 classifier flags school essays at more than its 5% line (the lower end of the 95% interval above 5%). Result: 1 of 16, not confirmed. Rates are reported per detector, never pooled, with Clopper-Pearson 95% intervals.'],
  ['Files',files(['e2_mirror/run.py','e2_mirror/analyze.py','corpus/build_audit.py','results/e2_mirror_scores.csv','results/e2_mirror_summary.json','results/e2_results_note.md'])]]);
 how('#howHuman',[
