@@ -4,4 +4,6 @@ Project page for the paper by Baqar Jafri (University of Stirling) and Dr. Mirei
 
 **Page:** https://baqarjafri.github.io/paper-assessing-the-thinker/
 
+**Talk:** https://www.youtube.com/watch?v=uRsm01Ic-cI
+
 The code, data and registration open on GitHub after the summit.
